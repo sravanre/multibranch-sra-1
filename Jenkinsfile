@@ -56,6 +56,13 @@ pipeline {
                 """
             }
         }
+        stage('codoe analysis 3'){
+            steps{
+                sh """
+                echo "doing 1 more code analysis"
+                """
+            }
+        }
 
         stage('Securtiy Code Analysis') {
             steps {
