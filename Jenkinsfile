@@ -44,6 +44,15 @@ pipeline {
             steps {
                 sh """
                 echo "Running Code Analysis"
+                
+                """
+            }
+        }
+
+        stage('codoe analysis 2'){
+            steps{
+                sh """
+                echo "doing 1 more code analysis"
                 """
             }
         }
