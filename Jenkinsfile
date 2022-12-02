@@ -34,6 +34,8 @@ pipeline {
             steps {
                 sh """
                 echo "Running Unit Tests"
+		echo "running another unit test"
+		echo "running 3rd unit test"
                 """
             }
         }
@@ -42,6 +44,22 @@ pipeline {
             steps {
                 sh """
                 echo "Running Code Analysis"
+                
+                """
+            }
+        }
+
+        stage('codoe analysis 2'){
+            steps{
+                sh """
+                echo "doing 1 more code analysis"
+                """
+            }
+        }
+        stage('codoe analysis 3'){
+            steps{
+                sh """
+                echo "doing 1 more code analysis"
                 """
             }
         }
