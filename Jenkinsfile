@@ -46,6 +46,15 @@ pipeline {
             }
         }
 
+        stage('Code Analysis 2') {
+            steps {
+                sh """
+                echo "Running Code Analysis"
+                sleep 10
+                """
+            }
+        }
+
         stage('Securtiy Code Analysis') {
             steps {
                 sh """
@@ -57,15 +66,17 @@ pipeline {
 
         stage('Build Deploy Code') {
             when {
-                branch 'release'
+                branch 'feature'
             }
             steps {
                 sh """
                 echo "Building Artifact"
+                sleep 5
                 """
 
                 sh """
                 echo "Deploying Code"
+                sleep 5
                 """
             }
         }
